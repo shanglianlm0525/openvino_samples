@@ -197,8 +197,7 @@ compressed_model = pipeline.run(model)
 compress_model_weights(compressed_model)
 
 # Step 8: Save the compressed model to the desired path.
-compressed_model_paths = save_model(model=compressed_model, save_path=MODEL_DIR, model_name="quantized_mobilenet_v2"
-)
+compressed_model_paths = save_model(model=compressed_model, save_path=MODEL_DIR, model_name="quantized_mobilenet_v2")
 compressed_model_xml = compressed_model_paths[0]["model"]
 compressed_model_bin = Path(compressed_model_paths[0]["model"]).with_suffix(".bin")
 
